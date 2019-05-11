@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono|Oswald');
+
+@font-face {
+    src: url("font.otf");
+    font-family: 'NeonLights';
+}
+
+;
+
+html {
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    background: url("/wood.jpg") repeat;
+    margin: 0;
+    overflow-y: hidden;
+
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+
+}
+
+//0 -40px 100px, 0 0 2px, 0 0 1em #fee, 0 0 0.5em black, 0 0 0.1em #fee, 0 10px 3px #000
+svg {
+    filter: brightness(180%) drop-shadow(0 0 4px purple) drop-shadow(0 0 1em white);
+
+    display: inline-block;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .svg {
+        fill: violet;
+        animation: blink linear infinite 2s;
+    }
+}
+
+#info {
+    margin-top: 3em;
+    font-size: 0.6em;
+}
+
+.sub {
+    text-align: center;
+
+    b {
+        font-size: 3em;
+        font-family: 'neon';
+        color: #fee;
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #fee, 0 0 0.5em black, 0 0 0.1em #fee, 0 10px 3px #000;
+
+        span {
+            animation: blink linear infinite 2s;
+        }
+    }
+}
+
+.logo {
+    text-align: center;
+    margin: auto;
+    animation: load linear 2s;
+    max-width: 90%;
+
+    p {
+        letter-spacing: 0.5em;
+    }
+
+    b {
+        font-size: 5em;
+        font-weight: 300;
+        line-height: 1em;
+        font-family: 'NeonLights';
+        color: #fee;
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #fee, 0 0 0.5em black, 0 0 0.1em #fee, 0 10px 3px #000;
+
+        span {
+            animation: blink linear infinite 2s;
+        }
+    }
+}
+
+p {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+
+
+section {
+    height: calc(var(--vh, 1vh) * 100);
+    display: block;
+    position: relative;
+
+    &:nth-child(2) {
+        margin-top: 200vh;
+    }
+
+    &:nth-child(3) {
+        margin-top: 200vh;
+    }
+}
+
+h1 {
+    color: white;
+    font-size: 20px;
+
+}
+
+.upArrow {
+    position: absolute;
+
+    height: 4.5em;
+    width: 4.5em;
+
+    top: 5vh;
+    color: white;
+    text-align: center;
+
+    border-radius: 50%;
+    border: 2px solid white;
+    left: 50%;
+    transform: translatex(-50%);
+    transition: 0.2s;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    &:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+}
+
+.downArrow {
+    position: absolute;
+
+    height: 4.5em;
+    width: 4.5em;
+
+    bottom: 5vh;
+    color: white;
+    text-align: center;
+
+    border-radius: 50%;
+    border: 2px solid white;
+    left: 50%;
+    transform: translatex(-50%);
+    transition: 0.2s;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    &:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        background-color: rgba(0, 0, 0, 0.5)
+    }
+}
+
+h4 {
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+i {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+@keyframes load {
+    0% {
+        opacity: 0
+    }
+
+    10% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 0;
+    }
+
+    11% {
+        color: #333;
+        opacity: 0.8;
+    }
+
+    12% {
+        opacity: 0.3;
+        text-shadow: none;
+    }
+
+    18% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    41% {
+        color: #333;
+        opacity: 0.8;
+    }
+
+    42% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 0;
+    }
+
+    43% {
+        color: #333;
+        opacity: 0.8;
+    }
+
+    44% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    61% {
+        color: #333;
+        opacity: 0.8;
+    }
+
+    62% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 0;
+    }
+
+    63% {
+        color: #333;
+        opacity: 0.8;
+    }
+
+    64% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    66% {
+        color: #333;
+        opacity: 0.8;
+    }
+
+    67% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 0;
+    }
+
+    68% {
+        color: #333;
+        opacity: 0.8;
+    }
+
+    69% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 0;
+    }
+
+    78% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 0;
+    }
+
+    79% {
+        color: #333;
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.3;
+        text-shadow: none;
+    }
+
+    81% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 1;
+    }
+
+    82% {
+        color: #333;
+        text-shadow: none;
+        opacity: 0.2;
+    }
+
+    83% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 1;
+    }
+
+    92% {
+        color: #333;
+        text-shadow: none;
+        opacity: 0.5;
+    }
+
+    92.5% {
+        color: inherit;
+        text-shadow: inherit;
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    78% {
+        color: inherit;
+        text-shadow: inherit;
+
+        fill: violet;
+    }
+
+    79% {
+        color: #333;
+        fill: #333;
+    }
+
+    80% {
+
+        text-shadow: none;
+    }
+
+    81% {
+        color: inherit;
+        fill: violet;
+
+        text-shadow: inherit;
+    }
+
+    82% {
+        color: #333;
+        fill: #333;
+
+        text-shadow: none;
+    }
+
+    83% {
+        color: inherit;
+        fill: violet;
+        text-shadow: inherit;
+    }
+
+    92% {
+        color: #333;
+        fill: #333;
+        text-shadow: none;
+    }
+
+    92.5% {
+        color: inherit;
+        fill: violet;
+        text-shadow: inherit;
+    }
+}
