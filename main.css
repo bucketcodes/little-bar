@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nova+Mono|Oswald");
 @font-face {
-  src: url("font.otf");
+  src: url("font.ttf");
   font-family: 'NeonLights';
 }
 
@@ -37,23 +37,9 @@ body {
   height: calc(var(--vh, 1vh) * 100);
 }
 
-svg {
-  -webkit-filter: brightness(180%) drop-shadow(0 0 4px purple) drop-shadow(0 0 1em white);
-          filter: brightness(180%) drop-shadow(0 0 4px purple) drop-shadow(0 0 1em white);
-  display: inline-block;
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
-svg .svg {
-  fill: violet;
-  -webkit-animation: blink linear infinite 2s;
-          animation: blink linear infinite 2s;
-}
-
 #info {
   margin-top: 3em;
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 .sub {
@@ -78,10 +64,13 @@ svg .svg {
   -webkit-animation: load linear 2s;
           animation: load linear 2s;
   max-width: 90%;
+  padding-bottom: 5em;
 }
 
 .logo p {
-  letter-spacing: 0.5em;
+  line-height: 1em;
+  margin-top: 0;
+  letter-spacing: 0.28em;
 }
 
 .logo b {
