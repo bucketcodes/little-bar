@@ -76,3 +76,5 @@ window.onscroll = function (e) {
     console.log(this.oldScroll > this.scrollY);
     this.oldScroll = this.scrollY;
 }
+
+window.onload = function(){ window.scrollTo(0,0); }
